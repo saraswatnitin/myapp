@@ -8,6 +8,9 @@ library(readr)
 library(ggplot2)
 library(scales)
 library(dplyr)
+library(h2o)
+
+h2o.init()
 
 data1<-read.csv("./labelled_train_features_data_wpct_forgbm1.csv",sep=',')
 
