@@ -9,7 +9,10 @@ library(ggplot2)
 library(scales)
 library(dplyr)
 
+data1<-read.csv("./labelled_train_features_data_wpct_forgbm1.csv",sep=',')
 
+
+data2<-data1[c(1,3,4,5,6,21)]
 
 shinyServer(function(input, output) {
   filtered_data <- reactive({
