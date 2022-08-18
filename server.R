@@ -47,7 +47,7 @@ shinyServer(function(input, output) {
   })
   
   output$download_data <- downloadHandler(
-    filename = "D:/Downloads_D/mobility_data/v2/demo/to_download.csv",
+    filename = "./to_download.csv",
     content = function(file) {
       data3 <- filtered_data()
       write.csv(data3, file, row.names = FALSE)
