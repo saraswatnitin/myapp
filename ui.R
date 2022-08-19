@@ -33,7 +33,7 @@ shinyUI(fluidPage(
                  
                  
                  #tags$h5(tags$img(src="cogent_monogram.png", alt = "This message should not appear", width = "50px", height = "50px"),
-                 #           tags$span(style="color:black","ARIA [Sandbox]")),
+                 #           tgs$span(style="color:black","ARIA [Sandbox]")),
                  
                  tags$div(`data-value` = "test",tags$img(src="https://forcogimage.s3.ap-south-1.amazonaws.com/cogent_monogram.png",width="43px" , height= "43px", align="left"),
                           tags$span(style="color:black",HTML('&nbsp;&nbsp;')),
