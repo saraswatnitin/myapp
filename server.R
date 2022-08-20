@@ -41,6 +41,44 @@ shinyServer(function(input, output) {
     
   })
   
+
+   output$gender_breakup = renderPlot({   
+    
+    #donut chart 
+    fd = filtered_data()
+    data_gen<- sqldf('select Gender,count(*) as CNT from fd group by Gender')
+    data_gen$fraction = data_gen$CNT / sum(data_gen$CNT)
+    data_gen$pct<- data_gen$fraction * 100
+    
+    hsize <- 3
+    
+    data_gen <- data_gen %>% 
+      mutate(x = hsize)
+    
+    data_gen$fraction<-round(data_gen$fraction, 2)
+    
+    data_gen$fraction<-round(data_gen$fraction, 2)
+    data_gen$pct<-round(data_gen$pct, 2)
+    
+    
+    ggplot(data_gen, aes(x = hsize, y = fraction, fill = Gender)) +
+      geom_col(color = "black") +
+      geom_text(aes(label = paste0(pct,'%')),
+                position = position_stack(vjust = 0.5)) +
+      coord_polar(theta = "y") +
+      #scale_fill_brewer(palette = "BuPu") +
+      scale_fill_manual(values = c("orange", "steelblue"))+
+      xlim(c(0.2, hsize + 0.5)) +
+      theme(panel.background = element_rect(fill = "white"),
+            panel.grid = element_blank(),
+            axis.title = element_blank(),
+            axis.ticks = element_blank(),
+            axis.text = element_blank())+
+      labs(title = "Gender Breakup")+
+      theme(plot.title = element_text(hjust = 0.5))
+    
+  })
+ 
   
   output$table <- DT::renderDataTable({
     filtered_data()

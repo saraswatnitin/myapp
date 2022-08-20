@@ -9,6 +9,7 @@ library(readr)
 library(ggplot2)
 library(scales)
 library(dplyr)
+library(sqldf)
 
 
 
@@ -130,7 +131,8 @@ shinyUI(fluidPage(
               
               br(),
               tags$h5(tags$span(style="color:grey","Showing a sample of 769 records from a database of 1.3 Million candidates")),
-              plotOutput('plot_population'),
+              #plotOutput('plot_population'),
+              splitLayout(cellWidths = c("65%", "35%"), plotOutput("plot_population"), plotOutput("gender_breakup")),
               br(), 
               downloadButton(outputId = "download_data", label = "Download Results"),
               br(),
