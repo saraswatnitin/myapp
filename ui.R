@@ -36,7 +36,7 @@ shinyUI(fluidPage(
                  #tags$h5(tags$img(src="cogent_monogram.png", alt = "This message should not appear", width = "50px", height = "50px"),
                  #           tgs$span(style="color:black","ARIA [Sandbox]")),
                  
-                 tags$div(`data-value` = "test",tags$img(src="https://forcogimage.s3.ap-south-1a.amazonaws.com/cogent_monogram.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZ54INN4FU2JTDS4I%2F20220820%2Fap-south-1a%2Fs3%2Faws4_request&X-Amz-Date=20220820T202038Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=95bfb967dfcaa88f657755fc25daff2c56e8ec79ceb94b9cb9a36323dd381e57"
+                 tags$div(`data-value` = "test",tags$img(src="https://forcogimage.s3.ap-south-1a.amazonaws.com/cogent_monogram.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZ54INN4FU2JTDS4I%2F20220820%2Fap-south-1a%2Fs3%2Faws4_request&X-Amz-Date=20220820T202953Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=c6381ce1475ac3f187f769690d57931a283bd410bc3aa5ef8d67acaea35c5e35"
                                                          ,width="43px" , height= "43px", align="left"),
                           tags$span(style="color:black",HTML('&nbsp;&nbsp;')),
                           tags$span(style="color:gray","ARIA [Sandbox]"),tags$br(),
