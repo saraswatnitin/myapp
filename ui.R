@@ -79,7 +79,16 @@ shinyUI(fluidPage(
                                                 )
                                ),
                                
-                               dashboardBody(tags$head(tags$style(HTML("body{min-height: 200px !important; }")) ),
+                               dashboardBody(
+                                tags$head(tags$style(HTML('.skin-black .main-sidebar {background-color: #ffffff;} 
+                     
+                                               .content-wrapper, .right-side {
+                                                 background-color: #f5f5f5;
+                                               }'
+                                               ))),
+ 
+                                
+                                #tags$head(tags$style(HTML("body{min-height: 200px !important; }")) ),
                                              tabItems(
                                                tabItem(tabName="data",
                                                        
